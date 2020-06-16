@@ -5,7 +5,6 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const path = require('path');
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
 const saltRounds = 10;
 const session = require("express-session");
 const passport = require("passport");
