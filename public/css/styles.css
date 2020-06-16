@@ -1,0 +1,245 @@
+body {
+	padding-bottom: 0;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+#logo {
+	margin-right: 18px;
+}
+
+.navbar-light .navbar-brand {
+	font-size: 37px;
+	font-family: 'Pacifico', cursive;
+}
+
+.nav-item {
+	font-size: 1.15rem;
+	font-family: 'Play', sans-serif;
+	padding-right: 8px;
+	padding-left: 8px;
+}
+
+.btn-addPictures {
+	font-size: 1.2rem;
+}
+
+.navbar-light .navbar-nav a.addPicturesLink.nav-link {
+	color: #17a2b8;
+}
+.navbar-light .navbar-nav a.addPicturesLink.nav-link:hover {
+	color: white;
+}
+.navbar-light .navbar-nav a.discoverPicturesLink.nav-link {
+	color: #28a745;
+}
+.navbar-light .navbar-nav a.discoverPicturesLink.nav-link:hover {
+	color: white;
+}
+
+.plusButton {
+	margin-right: 8px;
+	margin-bottom: 3px;
+}
+
+.centered-link-a {
+	color: #17a2b8;
+	position: absolute;
+    left: 43.5%;
+    transform: translateX(-50%);
+}
+
+.centered-link-b1 {
+	color: #17a2b8;
+	position: absolute;
+    left: 56%;
+    transform: translateX(-50%);
+}
+.centered-link-b2 {
+	color: #17a2b8;
+	position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.edit-icon-link {
+	display: inline-block;
+	width: 60px;
+	margin-right: 20px;
+}
+
+.about-div {
+	padding-bottom: 60px;
+}
+
+.p-div {
+	margin-bottom: 80px;
+}
+
+.p-about {
+	margin-bottom: 0;
+	font-size: 1.2rem;
+	font-weight: 450;
+}
+
+.img-gallery {
+    width: 100%; /* You can set the dimensions to whatever you want */
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 40px;
+}
+
+.picturesGallery {
+	position: absolute;
+	top: 150px;
+}
+
+.overlay-icons {
+	position: absolute;
+	visibility: hidden;
+	top: 46%;
+	right: 0;
+	left: 0;
+}
+
+.pictures-overlay-icons {
+	position: absolute;
+	bottom: 0;
+	left: 15px;
+	width: 94%;
+	text-align: right;
+	margin-top: 30px;
+	overflow: hidden;
+	height: 0;
+	background-color: rgba(181, 181, 181, 0.4);
+	transition: 0.5s ease;
+}
+
+.pictures-imageDiv:hover .pictures-overlay-icons {
+	animation: backgroundAnimation 2s;
+	animation-direction: normal;
+	height: 50px;
+}
+
+.about {
+	pointer-events: none;
+}
+
+.div-icon, .number {
+	display: inline-block;
+}
+
+.div-icon {
+	padding: 10px 8px;
+}
+
+.pictures-icon {
+	cursor: pointer;
+}
+
+.like-icon:hover {
+	background-image: url("/images/like2.png")
+}
+.heart-icon:hover {
+	background-image: url("/images/heart2.png")
+}
+
+.number {
+	padding-left: 4px;
+	color: black;
+	font-weight: bold;
+}
+
+.image-icons {
+	padding-right: 20px;
+	padding-left: 20px;
+	margin-right: 0;
+}
+
+footer {
+	position: relative;
+ 	bottom: -100px;
+ 	left: 0;
+ 	right: 0;
+	margin-left: 5px;
+	text-align: center;
+}
+
+.wrapper{
+	margin: 0 auto;
+}
+
+.centered-picture {
+	text-align: center;
+	display: inline-block;
+	height: 333px;
+	margin-bottom: 25px;
+}
+
+.login {
+	position: absolute;
+	top: 120px;
+}
+
+.form-signin {
+	padding-bottom: 0;
+}
+
+.or-login {
+	margin: 0;
+}
+
+.login-button-google {
+	background-color: rgba(250, 39, 39, 0.91);
+	color: white;
+	font-weight: bold;
+	font-size: 1.2rem;
+	padding: 8px 40px 8px 16px;
+	border-radius: 4px;
+	width: 100%;
+	text-align: right;
+	border-color: transparent;
+	margin-top: 0;
+	margin-bottom: 20px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.login-button-google:hover {
+	background-color: rgba(225, 39, 39, 0.91);
+}
+
+.google-logo {
+	display: inline-block;
+	float: left;
+	margin-left: 10px;
+}
+
+.login-button-fb {
+	background-color: #475993;
+	color: white;
+	font-weight: bold;
+	font-size: 1.2rem;
+	padding: 8px 20px 8px 16px;
+	border-radius: 4px;
+	width: 100%;
+	text-align: right;
+	border-color: transparent;
+	margin-top: 0;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.login-button-fb:hover {
+	background-color: rgba(48, 63, 113, 1);
+}
+
+.facebook-logo {
+	display: inline-block;
+	float: left;
+	margin-left: 5px;
+}

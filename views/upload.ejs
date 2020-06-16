@@ -1,0 +1,51 @@
+<%- include partials/header.ejs %>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+    <a class="navbar-brand" href="/"><img id="logo" src="../images/logo.png">Landscape</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+        <% if (isAuthenticated) { %>
+          <li class="nav-item">
+            <a class="nav-link" href="/profile"><%= username %></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Log Out</a>
+          </li>
+          <li class="nav-item centered-link-b2">
+            <button type="button" class="btn-addPictures btn btn-outline-success"><a class="discoverPicturesLink nav-link" href="/pictures">Discover Views</a></button>
+          </li>
+        <% } else { %>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/signup">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Log In</a>
+          </li>
+        <% } %>  
+      </ul>
+      <form class="form-inline mt-2 mt-md-0">
+      </form>
+    </div>
+  </nav>
+</header>
+
+<div class="container-fluid wrraper">
+<form class="form-signin text-center" action="/upload" method="POST" enctype="multipart/form-data">
+  <img class="mb-4" src="../images/logo.png" alt="" width="72" height="72">
+  <h1 class="h3 mb-3 font-weight-normal">Upload Picture</h1>
+  <label for="pictureTitle" class="sr-only">Title</label>
+  <input type="text" name="pictureTitle" class="form-control" placeholder="Title" required autofocus> <br>
+  <label for="uploadPicture" class="sr-only">Choose a Picture</label>
+  Choose a Picture: <br><br><input type="file" accept=".png,.jpg" name="uploadPicture" placeholder="Choose Picture" required> <br> <br>
+  <a href="/" id="uploadButton"><button name="button" class="btn btn-lg btn-primary btn-block" type="submit">Upload</button></a>
+</form>
+
+
+<%- include partials/footer.ejs %>

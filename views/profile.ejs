@@ -1,0 +1,55 @@
+<%- include partials/header.ejs %>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+    <a class="navbar-brand" href="/"><img id="logo" src="../images/logo.png">Landscape</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+        <% if (isAuthenticated) { %>
+          <li class="nav-item centered-link-a">
+            <button type="button" class="btn-addPictures btn btn-outline-info"><a class="addPicturesLink nav-link" href="/upload">Add Pictures</a></button>
+          </li>
+          <li class="nav-item centered-link-b1">
+            <button type="button" class="btn-addPictures btn btn-outline-success"><a class="discoverPicturesLink nav-link" href="/pictures">Discover Views</a></button>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/profile"><%= username %></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Log Out</a>
+          </li>
+        <% } %> 
+      </ul>
+      <form class="form-inline mt-2 mt-md-0">
+      </form>
+    </div>
+  </nav>
+</header>
+
+<div class="wrraper container-fluid picturesGallery">
+
+  <div class="gallery container-fluid">
+  	<div class="row">
+  		<% userPictures.forEach(function (image) { %>
+  			<div class="col-xl-4 col-lg-6 col-md-12 centered-picture">
+  				<h5><%= image.title %></h5>
+          <div class="imageDiv">
+      			<img class="img-gallery" src=<%= image.path %>>
+            <div class="overlay-icons">
+              <a href="/edit/<%= image._id %>" class="edit-icon-link">
+                <img class="image-icons edit-icon" src="../images/edit-icon.png" alt="edit-icon">
+              </a>
+              <a href="delete/<%= image._id %>">
+                <img class="image-icons remove-icon" src="../images/remove-icon.png" alt="remove-icon">
+              </a> 
+            </div>
+          </div>
+    		</div>
+  		<% }) %>	
+  	</div>
+  </div>
+
+<%- include partials/footer.ejs %>

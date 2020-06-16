@@ -1,0 +1,50 @@
+<%- include partials/header %>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+    <a class="navbar-brand" href="/"><img id="logo" src="../images/logo.png">Landscape</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+        <% if (isAuthenticated) { %>
+          <li class="nav-item centered-link-a">
+            <button type="button" class="btn-addPictures btn btn-outline-info"><a class="addPicturesLink nav-link" href="/upload">Add Pictures</a></button>
+          </li>
+          <li class="nav-item centered-link-b1">
+            <button type="button" class="btn-addPictures btn btn-outline-success"><a class="discoverPicturesLink nav-link" href="/pictures">Discover Views</a></button>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/profile"><%= username %></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Log Out</a>
+          </li>
+        <% } else { %>
+          <li class="nav-item centered-link-b2">
+            <button type="button" class="btn-addPictures btn btn-outline-success"><a class="discoverPicturesLink nav-link" href="/pictures">Discover Views</a></button>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/signup">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Log In</a>
+          </li>
+        <% } %>  
+      </ul>
+      <form class="form-inline mt-2 mt-md-0">
+      </form>
+    </div>
+  </nav>
+</header>
+<div class="wrapper">
+
+  <div class="container-fluid">
+    <img width="740px" height="360px" src="<%= imagePath %>" alt="<%= pictureName %>">
+  </div>
+
+<%- include partials/footer %>
